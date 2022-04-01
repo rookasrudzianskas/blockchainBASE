@@ -34,4 +34,22 @@ const Title = styled.div`
 
 const Description = styled.div`
   font-size: 1.1rem;
+`;
+
+const Placeholder = styled.div`
+  flex: 1;
+`;
+
+const Additional = styled.div`
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  & > span {
+    color: #8a919e !important;
+    font-size: 1rem;
+  }
+  
 `
