@@ -30,3 +30,13 @@ const Content = styled.div`
 const Table = styled.div`
   width: 100%;
 `
+
+const TableRow = styled.tr`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+  & > th {
+    text-align: center;
+  }
+`
