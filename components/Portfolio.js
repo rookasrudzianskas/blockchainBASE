@@ -36,6 +36,7 @@ const Portfolio = () => {
     );
 };
 
+
 export default Portfolio;
 
 const Wrapper = styled.div`
