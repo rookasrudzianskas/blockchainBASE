@@ -1,10 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Portfolio = () => {
     return (
-        <Wrapper>
-
-        </Wrapper>
+        <PortfolioTable>
+            <TableItem>
+                <Title>Your Assets</Title>
+            </TableItem>
+        </PortfolioTable>
     );
 };
 
@@ -22,10 +25,10 @@ const Content = styled.div`
   padding: 2rem 1rem;
 `
 
-// const PortfolioTable = styled.div`
-//   margin-top: 1rem;
-//   border: 1px solid #282b2f;
-// `;
+const PortfolioTable = styled.div`
+  margin-top: 1rem;
+  border: 1px solid #282b2f;
+`;
 
 const Table = styled.div`
   width: 100%;
