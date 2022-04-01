@@ -14,8 +14,17 @@ const Sidebar = () => {
             </LogoContainer>
 
             <NavItemsContainer>
-                {navItems.map((navItem) => (
-
+                {navItems.map((navItem, index) => (
+                    <NavItem key={index}>
+                        <NavIcon
+                            // style={{color: item.title}}
+                        >
+                            {navItem.icon}
+                        </NavIcon>
+                        <NavTitle>
+                            {navItem.title}
+                        </NavTitle>
+                    </NavItem>
                 ))}
             </NavItemsContainer>
         </Wrapper>
@@ -30,6 +39,10 @@ const Wrapper = styled.div`
   width: calc(22rem - 16px - 16px);
   padding: 0 1rem;
 `;
+
+const NavTitle = styled.div`
+
+`
 
 const LogoContainer = styled.div`
   margin: 1.5rem 0;
