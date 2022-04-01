@@ -48,3 +48,8 @@ const TableItem = styled.div`
 const Divider = styled.div`
   border-bottom: 1px solid #282b2f;
 `
+
+const Title = styled.div`
+  font-size: 1.5rem;
+  font-weight: 600;
+`
