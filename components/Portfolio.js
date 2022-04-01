@@ -5,11 +5,23 @@ import {coins} from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
-const Portfolio = () => {
+const Portfolio = ({walletBalance}) => {
     return (
         <Wrapper>
             <Content>
+                <Chart>
+                    <div>
+                        <Balance>
+                            <BalanceTitle>Portfolio balance</BalanceTitle>
+                            <BalanceValue>
+                                {'$'}
+                                {/*{walletBalance.toLocaleString()}*/}
+                                46,990.00
+                            </BalanceValue>
+                        </Balance>
+                    </div>
                 <BalanceChart />
+                </Chart>
             <PortfolioTable>
                 <TableItem>
                     <Title>Your Assets</Title>
