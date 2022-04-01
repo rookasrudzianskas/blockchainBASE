@@ -49,4 +49,14 @@ const NavItem = styled.div`
   }
 `
 
+const NavIcon = styled.div`
+  background-color: #141519;
+  padding: 0.7rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+  display: grid;
+  place-items: center;
+`
+
+
 
