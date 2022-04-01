@@ -6,6 +6,11 @@ const Promos = () => {
         <Wrapper>
             <OfferCard>
                 <Title>Yield earned</Title>
+                <Description>Earn up to 2.84% APY on your crypto</Description>
+                <Placeholder />
+                <Additional style={{fontSize: '1.5rem'}}>
+                    $0.000066 <span>2.84% APY</span>
+                </Additional>
             </OfferCard>
             <OfferCard>
                 <Title>Learn and Earn</Title>
