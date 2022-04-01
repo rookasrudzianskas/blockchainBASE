@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import {BsThreeDotsVertical} from "react-icons/bs";
 import {coins} from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
-const Portfolio = ({walletBalance}) => {
+const Portfolio = () => {
+    useEffect(() => {
+        const getCoins = async () => {
+            try {
+                const coins = await fetch("https://t9otsq1j.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D'coins'%5D%20%7B%0A%20%20name%2C%0A%20%20usdPrice%2C%0A%20%20contractAddress%2C%0A%20%20symbol%2C%0A%20%20logo%0A%7D");
+            } catch (e) {
+                console.log(e);
+            }
+        }
+    }, []);
     return (
         <Wrapper>
             <Content>
