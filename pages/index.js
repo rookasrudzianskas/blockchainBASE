@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {useWeb3} from "@3rdweb/hooks";
 import styled from 'styled-components'
+import Dashboard from "./dashboard";
 
 export default function Home() {
     const {address, connectWallet} = useWeb3();
