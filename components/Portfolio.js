@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {BsThreeDotsVertical} from "react-icons/all";
+import {BsThreeDotsVertical} from "react-icons/bs";
 
 const Portfolio = () => {
     return (
