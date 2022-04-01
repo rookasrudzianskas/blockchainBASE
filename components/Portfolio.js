@@ -97,3 +97,23 @@ const Title = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
 `;
+
+const Balance = styled.div`
+
+`;
+
+const BalanceTitle = styled.div`
+  color: #8a919e;
+  font-size: 0.9rem;
+`;
+
+const BalanceValue = styled.div`
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+`
+
+const Chart = styled.div`
+  border: 1px solid #282b2f;
+  padding: 1rem 2rem;
+`
