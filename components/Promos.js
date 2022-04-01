@@ -3,9 +3,14 @@ import styled from 'styled-components';
 
 const Promos = () => {
     return (
-        <div>
-
-        </div>
+        <Wrapper>
+            <OfferCard>
+                <Title>Yield earned</Title>
+            </OfferCard>
+            <OfferCard>
+                <Title>Learn and Earn</Title>
+            </OfferCard>
+        </Wrapper>
     );
 };
 
