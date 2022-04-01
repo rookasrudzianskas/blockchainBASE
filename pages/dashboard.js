@@ -1,11 +1,11 @@
 import React from 'react';
+import Header from "../components/Header";
 
 const Dashboard = ({address}) => {
     return (
-        <div className="">
-            <h1>Dashboard</h1>
-            <h1>{address}</h1>
-        </div>
+        <>
+            <Header />
+        </>
     );
 };
 
