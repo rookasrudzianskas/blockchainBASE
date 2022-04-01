@@ -5,7 +5,7 @@ import {useWeb3} from "@3rdweb/hooks";
 import styled from 'styled-components'
 import Dashboard from "./dashboard";
 
-export default function Home() {
+function Home() {
     const {address, connectWallet} = useWeb3();
 
   return (
@@ -33,6 +33,8 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;
 
 const Wrapper = styled.div`
     display: flex;
