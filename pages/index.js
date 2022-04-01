@@ -40,11 +40,14 @@ const Wrapper = styled.div`
     background-color: #0a0b0d;
     color: white;
     display: grid;
-  place-items: center;
+    place-items: center;
 `;
 
 const WalletConnect = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Dashboard = styled.div`
@@ -52,7 +55,8 @@ const Dashboard = styled.div`
 `;
 
 const Button = styled.div`
-
+  border: 1px solid #282b2f;
+  padding: 0.8rem;
 `
 const Details = styled.div`
 
