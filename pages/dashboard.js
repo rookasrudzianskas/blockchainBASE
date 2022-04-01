@@ -12,6 +12,7 @@ const Dashboard = ({address}) => {
                 <Header walletAddress={address} />
                 <Main />
             </MainContainer>
+
         </Wrapper>
     );
 };

@@ -30,6 +30,7 @@ function Home() {
                 </WalletConnect>
             )}
         </Wrapper>
+
     </div>
   )
 }

@@ -22,7 +22,7 @@ const Portfolio = ({walletBalance}) => {
                     </div>
                 <BalanceChart />
                 </Chart>
-            <PortfolioTable>
+            <PortfolioTable style={{paddingBottom: '5rem'}}>
                 <TableItem>
                     <Title>Your Assets</Title>
                 </TableItem>
