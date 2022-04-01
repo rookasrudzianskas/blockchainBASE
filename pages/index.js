@@ -40,6 +40,7 @@ const Wrapper = styled.div`
     background-color: #0a0b0d;
     color: white;
     display: grid;
+  place-items: center;
 `;
 
 const WalletConnect = styled.div`
