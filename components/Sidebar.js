@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from "next/image";
 import CoinbaseLogo from '../assets/cb-logo.png';
+import {navItems} from "../static/navItems";
 
 const Sidebar = () => {
     return (
@@ -11,6 +12,12 @@ const Sidebar = () => {
                     <Image src={CoinbaseLogo} alt="" />
                 </Logo>
             </LogoContainer>
+
+            <NavItemsContainer>
+                {navItems.map((navItem) => (
+
+                ))}
+            </NavItemsContainer>
         </Wrapper>
     );
 };
