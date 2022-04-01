@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "BlockChainBASE"
+    "name": "CoinBase"
   },
   "api": {
-    "projectId": "b1c2871k",
+    "projectId": "t9otsq1j",
     "dataset": "production"
   },
   "plugins": [
