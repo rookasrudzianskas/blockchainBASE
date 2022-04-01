@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {Line} from 'react-chartjs-2';
 import React from 'react';
+import Chart from 'chart.js/auto';
 
 const BalanceChart = () => {
 
@@ -51,14 +52,18 @@ const BalanceChart = () => {
         ],
     };
 
+    const options = {
+        plugins: {
+            legend: {
+                display: false,
+            },
+        },
+    }
+
     return (
         <Wrapper>
-            <Line
-                data={data}
-                options={options}
-                width={400}
-                height={400}
-            />
+            <Line data={data} options={options} width={400} height={150} />
+
         </Wrapper>
     );
 };
