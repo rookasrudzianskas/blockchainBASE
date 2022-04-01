@@ -50,10 +50,6 @@ const WalletConnect = styled.div`
   justify-content: center;
 `;
 
-const Dashboard = styled.div`
-
-`;
-
 const Button = styled.div`
   border: 1px solid #282b2f;
   padding: 0.8rem;
