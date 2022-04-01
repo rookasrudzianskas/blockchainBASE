@@ -70,5 +70,9 @@ const Button = styled.div`
   }
 `
 const Details = styled.div`
-
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #282b2f;
 `
