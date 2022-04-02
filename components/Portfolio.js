@@ -6,7 +6,7 @@ import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
 const Portfolio = () => {
-    const [sanityTokens, setSanityTokens] = useState([])
+    const [sanityTokens, setSanityTokens] = useState([]);
 
     useEffect(() => {
         const getCoins = async () => {
