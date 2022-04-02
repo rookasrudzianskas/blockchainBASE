@@ -16,15 +16,16 @@ const Portfolio = ({sanityTokens}) => {
     // const [sanityTokens, setSanityTokens] = useRecoilState(coinsData);
 
     useEffect(() => {
-        console.log('coins', sanityTokens);
-        // const getCoins = async () => {
-        //     try {
-        //         console.log('Rokas', sanityTokens);
-        //     } catch (e) {
-        //         console.log(e);
-        //     }
-        // }
-        // getCoins().then();
+        const getCoins = async () => {
+            try {
+                const coins = await fetch("https://t9otsq1j.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D'coins'%5D%20%7B%0A%20%20name%2C%0A%20%20usdPrice%2C%0A%20%20contractAddress%2C%0A%20%20symbol%2C%0A%20%20logo%0A%7D");
+                const tempSanityTokens = await coins.json();
+                console.log("This is it 🚀", tempSanityTokens);
+            } catch (e) {
+                console.log(e);
+            }
+        }
+        getCoins().then();
     }, []);
     return (
         <Wrapper>
@@ -151,27 +152,3 @@ const Chart = styled.div`
 `
 
 
-export const getStaticPaths = async ({params}) => {
-
-    const query = `
-                    *[_type == "coins"] {
-                        name,
-                        usdPrice,
-                        contractAddress,
-                        symbol,
-                        logo
-                    }
-                `;
-
-    const coins = await sanityClient.fetch(query);
-    const tempSanityTokens = await coins.json();
-    console.log("This is it", coins);
-    return {
-        props: {
-            sanityTokens: tempSanityTokens
-        },
-        fallback: false
-    }
-
-
-};
