@@ -35,6 +35,9 @@ const Portfolio = () => {
         getSanityAndThirdWebTokens().then()
     }, []);
 
+    console.log('Sanity 👉', sanityTokens);
+    console.log('ThirdWeb 👉', thirdWebTokens);
+
     return (
         <Wrapper>
             <Content>
