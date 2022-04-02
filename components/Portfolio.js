@@ -16,7 +16,7 @@ const Portfolio = () => {
                 )
                 const tempSanityTokens = await coins.json();
                 setSanityTokens(tempSanityTokens.result);
-                console.log(tempSanityTokens.result)
+                // console.log(tempSanityTokens.result)
             } catch (error) {
                 console.error(error)
             }
