@@ -18,7 +18,7 @@ const Portfolio = () => {
                 setSanityTokens(tempSanityTokens.result);
                 // console.log(tempSanityTokens.result)
             } catch (error) {
-                console.error(error)
+                console.error(error);
             }
         }
 
