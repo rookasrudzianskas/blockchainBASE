@@ -4,13 +4,6 @@ import {BsThreeDotsVertical} from "react-icons/bs";
 import {coins} from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
-import NextCors from 'nextjs-cors';
-import {sanityClient} from "../sanity";
-import Cors from 'cors'
-import {useRecoilState} from "recoil";
-import {coinsData} from "../atoms/Coins";
-
-
 
 const Portfolio = ({sanityTokens}) => {
     // const [sanityTokens, setSanityTokens] = useRecoilState(coinsData);
