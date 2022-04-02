@@ -5,7 +5,7 @@ import {coins} from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
-const Portfolio = () => {
+const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
     return (
         <Wrapper>
             <Content>
