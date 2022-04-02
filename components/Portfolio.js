@@ -9,6 +9,7 @@ const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
     // console.log(thirdWebTokens, '🔫');
     // console.log(walletAddress, '🔫');
     // console.log(sanityTokens, '🔫');
+    console.log(thirdWebTokens, '🔫');
     return (
         <Wrapper>
             <Content>
