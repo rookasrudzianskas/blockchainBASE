@@ -33,8 +33,8 @@ const Dashboard = ({address}) => {
         getSanityAndThirdWebTokens().then()
     }, []);
 
-    console.log('Sanity 👉', sanityTokens);
-    console.log('ThirdWeb 👉', thirdWebTokens);
+    // console.log('Sanity 👉', sanityTokens);
+    // console.log('ThirdWeb 👉', thirdWebTokens);
 
 
     return (
