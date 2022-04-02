@@ -5,21 +5,26 @@ import {coins} from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
-const Portfolio = ({sanityTokens}) => {
-    // const [sanityTokens, setSanityTokens] = useRecoilState(coinsData);
+const Portfolio = () => {
+    const [sanityTokens, setSanityTokens] = useState([])
 
     useEffect(() => {
         const getCoins = async () => {
             try {
-                const coins = await fetch("https://t9otsq1j.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D'coins'%5D%20%7B%0A%20%20name%2C%0A%20%20usdPrice%2C%0A%20%20contractAddress%2C%0A%20%20symbol%2C%0A%20%20logo%0A%7D");
+                const coins = await fetch(
+                    "https://t9otsq1j.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%27coins%27%5D%20%7B%0A%20%20name%2C%0A%20%20symbol%2C%0A%20%20contractAddress%2C%0A%20%20logo%2C%0A%20%20usdPrice%0A%7D",
+                )
                 const tempSanityTokens = await coins.json();
-                console.log("This is it 🚀", tempSanityTokens);
-            } catch (e) {
-                console.log(e);
+                setSanityTokens(tempSanityTokens.result);
+                console.log(tempSanityTokens.result)
+            } catch (error) {
+                console.error(error)
             }
         }
-        getCoins().then();
-    }, []);
+
+        getCoins()
+    }, [])
+
     return (
         <Wrapper>
             <Content>
