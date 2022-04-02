@@ -30,18 +30,18 @@ const Portfolio = () => {
     useEffect(() => {
         const getCoins = async () => {
             try {
-                let headers = new Headers();
-                headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
-                headers.append("Access-Control-Allow-Headers",
-                    "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-                headers.append("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+                // let headers = new Headers();
+                // headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+                // headers.append("Access-Control-Allow-Headers",
+                //     "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+                // headers.append("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
 
-                const coins = await fetch("https://t9otsq1j.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D'coins'%5D%20%7B%0A%20%20name%2C%0A%20%20usdPrice%2C%0A%20%20contractAddress%2C%0A%20%20symbol%2C%0A%20%20logo%0A%7D", {
-                        mode: 'cors',
-                        credentials: 'include',
-                        method: 'POST',
-                        headers: headers
-                    });
+                // const coins = await fetch("https://t9otsq1j.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D'coins'%5D%20%7B%0A%20%20name%2C%0A%20%20usdPrice%2C%0A%20%20contractAddress%2C%0A%20%20symbol%2C%0A%20%20logo%0A%7D", {
+                //         mode: 'cors',
+                //         credentials: 'include',
+                //         method: 'POST',
+                //         headers: headers
+                //     });
                 const tempSanityTokens = await coins.json();
                 setSanityTokens(tempSanityTokens.result);
                 console.log("This is it", tempSanityTokens.result);
