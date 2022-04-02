@@ -26,9 +26,10 @@ const Portfolio = () => {
                 const coins = await fetch(
                     "https://t9otsq1j.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%27coins%27%5D%20%7B%0A%20%20name%2C%0A%20%20symbol%2C%0A%20%20contractAddress%2C%0A%20%20logo%2C%0A%20%20usdPrice%0A%7D",
                 )
-                const tempSanityTokens = await coins.json();
-                setSanityTokens(tempSanityTokens.result);
-                // console.log(tempSanityTokens.result)
+                const sanityTokens = (await coins.json()).result
+                setSanityTokens(sanityTokens);
+
+                setThirdWebTokens(sanityTokens.map(token => sdk.getTokenModule(token.contractAddress)));
         }
 
         getSanityAndThirdWebTokens().then()
