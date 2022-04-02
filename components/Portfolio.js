@@ -6,6 +6,9 @@ import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
 
 const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
+    // console.log(thirdWebTokens, '🔫');
+    // console.log(walletAddress, '🔫');
+    // console.log(sanityTokens, '🔫');
     return (
         <Wrapper>
             <Content>
