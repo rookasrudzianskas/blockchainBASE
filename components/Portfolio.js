@@ -4,6 +4,9 @@ import {BsThreeDotsVertical} from "react-icons/bs";
 import {coins} from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
+import {ethers} from 'ethers';
+import  {ThirdwebSDK} from "@3rdweb/sdk";
+
 
 const Portfolio = () => {
     const [sanityTokens, setSanityTokens] = useState([]);
