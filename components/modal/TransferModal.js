@@ -32,6 +32,9 @@ const TransferModal = () => {
                     <p>Receive</p>
                 </Option>
             </Selector>
+            <ModalMain>
+                {selectedModal(action)}
+            </ModalMain>
         </Wrapper>
     );
 };
