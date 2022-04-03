@@ -6,7 +6,7 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
     const [amount, setAmount] = React.useState(0);
     const [recipient, setRecipient] = React.useState('');
     useEffect(() => {
-        console.table(selectedToken);
+        console.log("This is selected token:", selectedToken);
     }, []);
 
     return (

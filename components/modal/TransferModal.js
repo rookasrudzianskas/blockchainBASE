@@ -5,7 +5,7 @@ import Transfer from "./Transfer";
 const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
     const [action, setAction] = React.useState('send');
     const [selectedToken, setSelectedToken] = React.useState(sanityTokens[0]);
-    // console.log(sanityTokens)
+    // console.log(sanityTokens[0])
     const selectedStyle = {
         color: '#3773f5',
     }
