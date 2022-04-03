@@ -21,6 +21,10 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
         setImageUrl(url);
     }, [selectedToken]);
 
+    useEffect(() => {
+
+    }, []);
+
     return (
         <Wrapper>
             <Amount>
