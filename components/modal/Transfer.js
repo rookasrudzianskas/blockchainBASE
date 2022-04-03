@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {FaWallet} from "react-icons/fa";
 
-const Transfer = () => {
+const Transfer = ({selectedToken}) => {
     const [amount, setAmount] = React.useState(0);
     const [recipient, setRecipient] = React.useState('');
 
