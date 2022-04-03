@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import {FaWallet} from "react-icons/fa";
+import imageUrlBuilder from '@sanity/image-url';
+import {client} from '../../lib/sanity';
 
 const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => {
     const [amount, setAmount] = React.useState(0);
