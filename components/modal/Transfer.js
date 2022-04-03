@@ -22,8 +22,9 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
     }, [selectedToken]);
 
     useEffect(() => {
-
-    }, []);
+        const activeToken = thirdWebTokens.find(token => token.address === selectedToken.contractAddress);
+        console.log(activeToken, '🔫');
+    }, [thirdWebTokens, selectedToken]);
 
     return (
         <Wrapper>
