@@ -9,6 +9,22 @@ Modal.setAppElement('#__next');
 
 const Header = ({walletAddress, connectedWallet}) => {
     const router = useRouter();
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            border: 'none',
+            padding: '0',
+            background: '#0a0b0d',
+        },
+        overlay: {
+            backgroundColor: 'rgba(10,11,13,0.75)',
+        },
+    }
 
     return (
             <Wrapper>
@@ -30,8 +46,9 @@ const Header = ({walletAddress, connectedWallet}) => {
                 <Modal
                     isOpen={!!router.query.transfer}
                     onRequestClose={() => router.push('/')}
+                    style={customStyles}
                 >
-
+                    <TransferModal />
                 </Modal>
             </Wrapper>
 
