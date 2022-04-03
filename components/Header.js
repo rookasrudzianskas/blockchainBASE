@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Modal from 'react-modal';
+import {useRouter} from 'next/router';
+// import TransferModal from './modal/TransferModal;
+import Link from 'next/link';
 
 const Header = ({walletAddress, connectedWallet}) => {
     return (
