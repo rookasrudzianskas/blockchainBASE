@@ -39,7 +39,8 @@ const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
                 })
             )
             // console.log(totalBalance, 'total balance');
-            console.log(totalBalance.reduce((acc, curr) => acc + curr), 'total balance');
+            // console.log(totalBalance.reduce((acc, curr) => acc + curr), 'total balance');
+            setWalletBalance(totalBalance.reduce((acc, curr) => acc + curr));
         }
         calculateTotalBalance().then();
     }, []);
@@ -53,8 +54,7 @@ const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
                             <BalanceTitle>Portfolio balance</BalanceTitle>
                             <BalanceValue>
                                 {'$'}
-                                {/*{walletBalance.toLocaleString()}*/}
-                                46,990.00
+                                {walletBalance.toLocaleString()}
                             </BalanceValue>
                         </Balance>
                     </div>
