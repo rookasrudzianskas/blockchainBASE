@@ -40,10 +40,12 @@ const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
             )
             // console.log(totalBalance, 'total balance');
             // console.log(totalBalance.reduce((acc, curr) => acc + curr), 'total balance');
-            setWalletBalance(totalBalance.reduce((acc, curr) => acc + curr));
+            if(totalBalance.length > 0) {
+                setWalletBalance(totalBalance.reduce((acc, curr) => acc + curr));
+            }
         }
         calculateTotalBalance().then();
-    }, []);
+    }, [thirdWebTokens,sanityTokens]);
     // console.log(thirdWebTokens.balanceOf(walletAddress), '🔫');ss
     return (
         <Wrapper>
@@ -54,7 +56,8 @@ const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
                             <BalanceTitle>Portfolio balance</BalanceTitle>
                             <BalanceValue>
                                 {'$'}
-                                {walletBalance.toLocaleString()}
+                                {walletBalance?.toLocaleString() || 0}
+
                             </BalanceValue>
                         </Balance>
                     </div>
