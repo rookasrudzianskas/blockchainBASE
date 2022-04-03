@@ -53,6 +53,7 @@ const Transfer = () => {
             </Row>
             <Row>
                 <BalanceTitle>ETH Balance</BalanceTitle>
+                <Balance>1.2 ETH</Balance>
             </Row>
 
         </Wrapper>
