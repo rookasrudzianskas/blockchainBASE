@@ -66,6 +66,11 @@ const Option = styled.div`
     cursor: pointer;
     background-color: #111214;
   }
+`;
+
+const ModalMain = styled.div`
+  padding: 1rem;
+  flex: 1;
 `
 
 
