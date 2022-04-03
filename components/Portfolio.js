@@ -27,8 +27,10 @@ const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
             const balance = await token.balanceOf(walletAddress);
             total += Number(balance.displayValue) * tokenToUSD[token.address];
         }
+        console.table(total);
+        return total;
     }
-    console.table(tokenToUSD);
+    calculateTotalBalance().then();
     // console.log(thirdWebTokens.balanceOf(walletAddress), '🔫');ss
     return (
         <Wrapper>
