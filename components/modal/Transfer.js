@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Transfer = () => {
+    const [amount, setAmount] = React.useState(0);
     return (
         <Wrapper>
             <Amount>
@@ -9,8 +10,14 @@ const Transfer = () => {
                     <FlexInput
                         type="number"
                         placeholder="0"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
                     />
+                    <span>ETH</span>
                 </FlexInputContainer>
+                <Warning style={{color: amount && '#0a0b0d'}}>
+                    Amount is required field
+                </Warning>
             </Amount>
 
         </Wrapper>
