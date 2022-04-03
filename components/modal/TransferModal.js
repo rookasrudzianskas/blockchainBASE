@@ -14,10 +14,10 @@ const TransferModal = () => {
     return (
         <Wrapper>
             <Selector>
-                <Option style={{selectedStyle}}>
+                <Option style={selectedStyle}>
                     <p>Send</p>
                 </Option>
-                <Option style={{unselectedStyle}}>
+                <Option style={unselectedStyle}>
                     <p>Receive</p>
                 </Option>
             </Selector>
