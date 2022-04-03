@@ -4,6 +4,14 @@ import styled from 'styled-components';
 const Transfer = () => {
     return (
         <Wrapper>
+            <Amount>
+                <FlexInputContainer>
+                    <FlexInput
+                        type="number"
+                        placeholder="0"
+                    />
+                </FlexInputContainer>
+            </Amount>
 
         </Wrapper>
     );
