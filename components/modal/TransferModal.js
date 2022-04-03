@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Transfer from "./Transfer";
 
-const TransferModal = () => {
+const TransferModal = ({sanityTokens}) => {
     const [action, setAction] = React.useState('send');
+    const [selectedToken, setSelectedToken] = React.useState(sanityTokens[0]);
     const selectedStyle = {
         color: '#3773f5',
     }
