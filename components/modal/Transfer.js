@@ -7,15 +7,18 @@ import {client} from '../../lib/sanity';
 const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => {
     const [amount, setAmount] = React.useState(0);
     const [recipient, setRecipient] = React.useState('');
-    const [builder] = useState(imageUrlBuilder(client))
+    const [builder] = useState(imageUrlBuilder(client));
+    const [imageUrl, setImageUrl] = useState(null);
 
     useEffect(() => {
         console.log("This is selected token: 🔥", selectedToken);
-        if(selectedToken > 0) {
-            const url = imageUrlBuilder(client).image(selectedToken.logo).url();
-            console.log(url);
-        }
-    }, []);
+        // if(selectedToken > 0) {
+        //     const url = imageUrlBuilder(client).image(selectedToken.logo).url();
+        //     console.log(url);
+        // }
+        const url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png';
+        setImageUrl(url);
+    }, [selectedToken]);
 
     return (
         <Wrapper>
@@ -53,7 +56,7 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
                     </FieldName>
                     <CoinSelectList>
                         <Icon>
-                            <img src="https://bitcoin.org/img/icons/opengraph.png?1648897668" alt=""/>
+                            <img src={imageUrl} style={{width: '20px', height: '20px'}} alt=""/>
                         </Icon>
                         <CoinName>Ethereum</CoinName>
                     </CoinSelectList>
