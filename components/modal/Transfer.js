@@ -20,6 +20,12 @@ const Transfer = () => {
                 </Warning>
             </Amount>
 
+            <TransferForm>
+                <Row>
+                    <FieldName>To</FieldName>
+                </Row>
+            </TransferForm>
+
         </Wrapper>
     );
 };
