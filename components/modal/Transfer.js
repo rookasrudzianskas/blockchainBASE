@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {FaWallet} from "react-icons/fa";
 
 const Transfer = () => {
     const [amount, setAmount] = React.useState(0);
@@ -23,6 +24,9 @@ const Transfer = () => {
             <TransferForm>
                 <Row>
                     <FieldName>To</FieldName>
+                    <Icon>
+                        <FaWallet />
+                    </Icon>
                 </Row>
             </TransferForm>
 
