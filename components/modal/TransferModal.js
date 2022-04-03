@@ -11,6 +11,10 @@ const TransferModal = () => {
         border: '1px solid #282b2f',
     }
 
+    const selectedModal = () => {
+
+    }
+
     return (
         <Wrapper>
             <Selector>
