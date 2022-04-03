@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import {FaWallet} from "react-icons/fa";
 
-const Transfer = ({selectedToken}) => {
+const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => {
     const [amount, setAmount] = React.useState(0);
     const [recipient, setRecipient] = React.useState('');
+    useEffect(() => {
+        console.table(selectedToken);
+    }, []);
 
     return (
         <Wrapper>
