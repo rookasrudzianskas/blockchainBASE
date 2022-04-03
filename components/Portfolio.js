@@ -9,7 +9,7 @@ const Portfolio = ({thirdWebTokens, walletAddress, sanityTokens}) => {
     // console.table(thirdWebTokens);
     // console.log(walletAddress, '🔫');
     // console.log(sanityTokens, '🔫');
-    thirdWebTokens[0]?.balanceOf(walletAddress).then(balance => console.log(Number(balance.displayValue)));
+    thirdWebTokens[0]?.balanceOf(walletAddress).then(balance => console.log(Number(balance.displayValue) * 3100));
     // console.log(thirdWebTokens.balanceOf(walletAddress), '🔫');ss
     return (
         <Wrapper>
