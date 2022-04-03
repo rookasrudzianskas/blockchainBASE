@@ -4,7 +4,7 @@ import Transfer from "./Transfer";
 
 const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
     const [action, setAction] = useState('send');
-    const [selectedToken, setSelectedToken] = useState(sanityTokens);
+    const [selectedToken, setSelectedToken] = useState(sanityTokens[0]);
 
     // console.log(sanityTokens[0])
     const selectedStyle = {
