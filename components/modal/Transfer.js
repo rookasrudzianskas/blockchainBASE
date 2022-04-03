@@ -4,6 +4,8 @@ import {FaWallet} from "react-icons/fa";
 
 const Transfer = () => {
     const [amount, setAmount] = React.useState(0);
+    const [recipient, setRecipient] = React.useState('');
+
     return (
         <Wrapper>
             <Amount>
@@ -27,6 +29,15 @@ const Transfer = () => {
                     <Icon>
                         <FaWallet />
                     </Icon>
+                    <Recipient
+                        placeholder="Address"
+                        value={recipient}
+                        onChange={(e) => setRecipient(e.target.value)}
+                    />
+                </Row>
+                <Divider />
+                <Row>
+
                 </Row>
             </TransferForm>
 
