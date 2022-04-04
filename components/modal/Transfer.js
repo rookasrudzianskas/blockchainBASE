@@ -13,11 +13,7 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
 
     useEffect(() => {
         console.log("This is selected token: 🔥", selectedToken);
-        // if(selectedToken > 0) {
-        //     const url = imageUrlBuilder(client).image(selectedToken.logo).url();
-        //     console.log(url);
-        // }
-        const url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png';
+        const url = imageUrlBuilder(client)?.image(selectedToken?.logo)?.url();
         setImageUrl(url);
     }, [selectedToken]);
 
