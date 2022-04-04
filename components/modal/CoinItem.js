@@ -57,6 +57,9 @@ const CoinItem = ({
             <Balance>
                 {balance} {token.symbol}
             </Balance>
+            <IsSelected>
+                {selectedToken.contractAddress === token.contractAddress && <FaCheck/>}
+            </IsSelected>
         </Wrapper>
     );
 };
