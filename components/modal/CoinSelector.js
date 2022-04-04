@@ -10,7 +10,7 @@ const CoinSelector = ({
                       }) => {
     return (
         <Wrapper>
-    <h2>This is working</h2>
+    <h2>{walletAddress}</h2>
         </Wrapper>
     );
 };
