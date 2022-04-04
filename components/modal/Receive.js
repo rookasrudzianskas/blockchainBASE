@@ -23,6 +23,13 @@ const Receive = ({ setAction, selectedToken, walletAddress }) => {
                     />
                 </QRContainer>
                 <Divider />
+                <Row>
+                    <CoinSelectList>
+                        <Icon>
+                            <img src={imageUrl} alt=""/>
+                        </Icon>
+                    </CoinSelectList>
+                </Row>
             </Content>
         </Wrapper>
     );
