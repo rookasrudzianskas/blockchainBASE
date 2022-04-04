@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CoinItem from "./CoinItem";
 
 const CoinSelector = ({
                           setAction,
@@ -13,7 +14,7 @@ const CoinSelector = ({
             <Title>Select an Asset</Title>
             <CoinList>
                 {sanityTokens.map((token, index) => (
-                    <h2>{token.name}</h2>
+                    <CoinItem key={index}  />
                     ))}
             </CoinList>
         </Wrapper>
