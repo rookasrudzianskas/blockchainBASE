@@ -1,0 +1,92 @@
+import React from 'react';
+
+const Receive = () => {
+    return (
+        <Wrapper>
+
+        </Wrapper>
+    );
+};
+
+export default Receive;
+
+const Wrapper = styled.div`
+  height: 100%;
+`
+
+const Content = styled.div`
+  border: 1px solid #282b2f;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`
+
+const QRContainer = styled.div`
+  flex: 1;
+  display: grid;
+  place-items: center;
+`
+
+const Divider = styled.div`
+  border-bottom: 1px solid #282b2f;
+`
+
+const Row = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  color: #8a919e;
+  font-size: 1.2rem;
+`
+
+const Icon = styled.div`
+  margin-right: 1rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  & > img {
+    /* margin: -0.5rem 1rem; */
+    height: 120%;
+    width: 120%;
+    object-fit: cover;
+  }
+`
+
+const CoinSelectList = styled.div`
+  display: flex;
+  flex: 1.3;
+  height: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+const CoinName = styled.div`
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+  text-wrap: wrap;
+  margin-right: 0.5rem;
+`
+
+const Title = styled.div`
+  color: white;
+  margin-bottom: 0.5rem;
+`
+
+const Address = styled.div`
+  font-size: 0.8rem;
+`
+
+const CopyButton = styled.div`
+  cursor: pointer;
+`
