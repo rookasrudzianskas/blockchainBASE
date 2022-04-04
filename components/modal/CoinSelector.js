@@ -7,6 +7,7 @@ const CoinSelector = ({
                           selectedToken,
                           setSelectedToken,
                           sanityTokens,
+                          thirdWebTokens,
                           walletAddress,
                       }) => {
     return (
@@ -14,7 +15,7 @@ const CoinSelector = ({
             <Title>Select an Asset</Title>
             <CoinList>
                 {sanityTokens.map((token, index) => (
-                    <CoinItem key={index}  />
+                    <CoinItem key={index} token={token} sender={walletAddress} selectedToken={selectedToken} setSelectedToken={setSelectedToken} thirdWebTokens={thirdWebTokens} sanityTokens={sanityTokens} setAction={setAction}  />
                     ))}
             </CoinList>
         </Wrapper>
