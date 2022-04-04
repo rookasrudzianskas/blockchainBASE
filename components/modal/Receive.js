@@ -16,7 +16,13 @@ const Receive = ({ setAction, selectedToken, walletAddress }) => {
 
     return (
         <Wrapper>
-
+            <Content>
+                <QRContainer>
+                    <img
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${walletAddress}`}
+                    />
+                </QRContainer>
+            </Content>
         </Wrapper>
     );
 };
