@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
+import imageUrlBuilder from "@sanity/image-url";
+import {client} from "../../lib/sanity";
 
 const CoinItem = ({
                       token,
@@ -10,10 +12,39 @@ const CoinItem = ({
                       sanityTokens,
                       thirdWebTokens,
                   }) => {
+    const [balance, setBalance] = useState('Fetching...');
+    const [imageUrl, setImageUrl] = useState(null);
+
+    useEffect(() => {
+        const getBalance = async () => {
+            let activeThirdWebToken;
+
+            thirdWebTokens.map(thirdWebToken => {
+                if(thirdWebToken.address === token.contractAddress) {
+                    activeThirdWebToken = thirdWebToken;
+                }
+            })
+            const balance = await activeThirdWebToken.balanceOf(sender);
+
+            return setBalance(balance.displayValue.split('.')[0]);
+        };
+
+        const getImgUrl = async () => {
+            const imgUrl = imageUrlBuilder(client)?.image(selectedToken?.logo)?.url();
+            setImageUrl(imgUrl)
+        }
+        getImgUrl().then();
+        getBalance().then();
+    }, []);
+
     return (
-        <div>
-            {sanityTokens[0].name}
-        </div>
+        <Wrapper>
+            <Main>
+                <Icon>
+                    <img src="" alt=""/>
+                </Icon>
+            </Main>
+        </Wrapper>
     );
 };
 
