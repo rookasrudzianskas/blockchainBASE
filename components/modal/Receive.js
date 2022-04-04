@@ -28,7 +28,23 @@ const Receive = ({ setAction, selectedToken, walletAddress }) => {
                         <Icon>
                             <img src={imageUrl} alt=""/>
                         </Icon>
+                        <CoinName>{selectedToken?.name}</CoinName>
                     </CoinSelectList>
+                </Row>
+                <Divider />
+                <Row>
+                    <div>
+                        <Title>{selectedToken?.symbol} Address</Title>
+                        <Address>{walletAddress}</Address>
+                    </div>
+                    <CopyButton
+                        onClick={() => {
+                            navigator.clipboard.writeText(selectedToken.contractAddress)
+                            setCopied(true)
+                        }}
+                    >
+                        {copied ? <FaCheck style={{ color: '#27ad75' }} /> : <BiCopy />}
+                    </CopyButton>
                 </Row>
             </Content>
         </Wrapper>
