@@ -12,14 +12,14 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
     const [activeThirdWebToken, setActiveThirdWebToken] = useState(null);
 
     useEffect(() => {
-        console.log("This is selected token: 🔥", selectedToken);
+        // console.log("This is selected token: 🔥", selectedToken);
         const url = imageUrlBuilder(client)?.image(selectedToken?.logo)?.url();
         setImageUrl(url);
     }, [selectedToken]);
 
     useEffect(() => {
         const activeToken = thirdWebTokens.find(token => token.address === selectedToken?.contractAddress);
-        console.log(activeToken, '🔫');
+        setActiveThirdWebToken(activeToken);
     }, [thirdWebTokens, selectedToken]);
 
     return (
@@ -60,7 +60,7 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
                         <Icon>
                             <img src={imageUrl} style={{width: '20px', height: '20px'}} alt=""/>
                         </Icon>
-                        <CoinName>Ethereum</CoinName>
+                        <CoinName>{selectedToken?.name}</CoinName>
                     </CoinSelectList>
                 </Row>
             </TransferForm>
