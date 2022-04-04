@@ -49,6 +49,10 @@ const CoinItem = ({
                 <Icon>
                     <img src={imageUrl} alt=""/>
                 </Icon>
+                <NameDetails>
+                    <Name>{token.name}</Name>
+                    <Symbol>{token.symbol}</Symbol>
+                </NameDetails>
             </Main>
         </Wrapper>
     );
