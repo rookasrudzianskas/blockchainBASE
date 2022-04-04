@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 Modal.setAppElement('#__next');
 
-const Header = ({walletAddress, connectedWallet, sanityTokens, thirdWebTokens}) => {
+const Header = ({walletAddress, connectWallet, sanityTokens, thirdWebTokens}) => {
     const router = useRouter();
     const customStyles = {
         content: {
@@ -30,13 +30,18 @@ const Header = ({walletAddress, connectedWallet, sanityTokens, thirdWebTokens}) 
             <Wrapper>
                 <Title>Assets</Title>
                 <ButtonsContainer>
-                    <WalletLink>
-                        <WalletLinkTitle>Wallet Connected</WalletLinkTitle>
-                        <WalletAddress>{walletAddress.slice(0,7)}...{walletAddress.slice(35)}</WalletAddress>
-                    </WalletLink>
-                    <Button   style={{backgroundColor: '#3773f5', color: '#000' }}>
-                        Buy / Sell
-                    </Button>
+                    {walletAddress ? (
+                        <WalletLink>
+                            <WalletLinkTitle>Wallet Connected</WalletLinkTitle>
+                            <WalletAddress>
+                                {walletAddress.slice(0, 7)}...{walletAddress.slice(35)}
+                            </WalletAddress>
+                        </WalletLink>
+                    ) : (
+                        <Button onClick={() => connectWallet('injected')}>
+                            Connect Wallet
+                        </Button>
+                    )}
                     <Link href={'/?transfer=1'}>
                         <Button>
                             Send / Receive
