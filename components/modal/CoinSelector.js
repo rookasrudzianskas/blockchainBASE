@@ -10,7 +10,12 @@ const CoinSelector = ({
                       }) => {
     return (
         <Wrapper>
-    <h2>{walletAddress}</h2>
+            <Title>Select an Asset</Title>
+            <CoinList>
+                {sanityTokens.map((token, index) => (
+                    <h2>{token.name}</h2>
+                    ))}
+            </CoinList>
         </Wrapper>
     );
 };
