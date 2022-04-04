@@ -1,6 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+import { BiCopy } from 'react-icons/bi'
+import { FaCheck } from 'react-icons/fa'
+import imageUrlBuilder from '@sanity/image-url'
+import { client } from '../../lib/sanity'
 
-const Receive = () => {
+const Receive = ({ setAction, selectedToken, walletAddress }) => {
     return (
         <Wrapper>
 
