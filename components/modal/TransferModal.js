@@ -24,6 +24,38 @@ const TransferModal = ({sanityTokens, thirdWebTokens, walletAddress}) => {
                 return <h2>receive</h2>
             case 'select':
                 return <CoinSelector setAction={setAction} selectedToken={selectedToken} setSelectedToken={setSelectedToken} sanityTokens={sanityTokens} thirdWebTokens={thirdWebTokens} walletAddress={walletAddress} />
+            case 'transferring':
+                return (
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            fontSize: '1.5rem',
+                        }}
+                    >
+                        Transfer in progress...
+                    </div>
+                )
+            case 'transferred':
+                return (
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            fontSize: '2rem',
+                            fontWeight: '600',
+                            color: '#27ad75',
+                        }}
+                    >
+                        Transfer complete
+                    </div>
+                )
             default:
                 return <h2>send</h2>
         }
