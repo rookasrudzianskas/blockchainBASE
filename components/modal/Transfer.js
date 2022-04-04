@@ -68,8 +68,8 @@ const Transfer = ({selectedToken, setAction, thirdWebTokens, walletAddress}) => 
                 <Continue>Continue</Continue>
             </Row>
             <Row>
-                <BalanceTitle>ETH Balance</BalanceTitle>
-                <Balance>1.2 ETH</Balance>
+                <BalanceTitle>{selectedToken.symbol} Balance</BalanceTitle>
+                <Balance>1.2 {selectedToken.symbol}</Balance>
             </Row>
 
         </Wrapper>
