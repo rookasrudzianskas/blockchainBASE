@@ -6,13 +6,12 @@ const CoinSelector = ({
                           selectedToken,
                           setSelectedToken,
                           sanityTokens,
-                          twTokens,
                           walletAddress,
                       }) => {
     return (
-        <div>
-
-        </div>
+        <Wrapper>
+    <h2>This is working</h2>
+        </Wrapper>
     );
 };
 
